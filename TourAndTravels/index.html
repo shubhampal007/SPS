@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour And Travels</title>
+    <style>
+    .main-location-selector{
+        background-color: lightgray;
+        padding: 15px;
+        text-align: "center";
+        margin: 0;
+     }
+     .submit{
+        color: black;
+        padding: 5px 30px;
+        
+     }
+     #submit2{
+     display: inline; width: 130px; background-color: rgb(4, 170, 109); color: white; border-radius: 105px;}
+
+    </style>
+    
+</head>
+<body>
+ <div class="main-location-selector" id="main-portion">
+   <form action="/action.php">
+    <label for="from">From:</label>
+    <br>
+    <input type="text" id="from">
+    <br>
+    <label for="to">To:</label>
+    <br>
+    <input type="text" id="to">
+     <br>
+
+    <input type="radio" id="one-way" value="OneWay" name="journey-type">
+    <label for="one-way">Single Trip</label>
+
+
+    <input type="radio" id="two-way" value="TwoWay" name="journey-type">
+    <label for="two-way">Round Trip</label>
+    <br>
+
+    <!-- <input type="submit" name="submit" id="submit" class="submit"> -->
+   </form>
+   <button class="submit" id="submit2">submit</button>
+</div>
+<script>
+   const button=document.querySelector('button');
+   button.addEventListener('mousedown',onClick);
+   function onClick()
+   {
+      alert("Form Submitted");
+   }
+ </script>
+</body>
+</html>
